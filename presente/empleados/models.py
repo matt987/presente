@@ -17,25 +17,24 @@ class Empleado(models.Model):
 class Profesor(models.Model):
 	empleado = models.ForeignKey(Empleado)
 	def __str__(self):
-		return empleado
+		return str(self.empleado)
 
 class Decano(models.Model):
 	empleado = models.ForeignKey(Empleado)
 	def __str__(self):
-		return empleado
+		return str(self.empleado)
 
 class Secretario(models.Model):
 	empleado = models.ForeignKey(Empleado)	
 	def __str__(self):
-		return empleado
+		return str(self.empleado)
 
 class Recepcionista(models.Model):
 	empleado = models.ForeignKey(Empleado)	
 	def __str__(self):
-		return empleado
+		return str(self.empleado)
 
 class CoordinadorCarrera(models.Model):
 	empleado = models.ForeignKey(Empleado)	
 	def __str__(self):
-		return empleado
-		
+		return str(self.empleado)

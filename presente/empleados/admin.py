@@ -1,5 +1,7 @@
 from django.contrib import admin
-from empleados.models import Profesor, Decano, Secretario, Recepcionista, CoordinadorCarrera
+from empleados.models import Empleado, Profesor, Decano, Secretario, Recepcionista, CoordinadorCarrera
+
+admin.site.register(Empleado)
 
 admin.site.register(Profesor)
 admin.site.register(Decano)
