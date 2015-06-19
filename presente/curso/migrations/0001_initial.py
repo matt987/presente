@@ -13,28 +13,21 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Planilla',
+            name='Curso',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('id', models.AutoField(primary_key=True, serialize=False, verbose_name='ID', auto_created=True)),
                 ('fecha', models.DateField()),
                 ('created_at', models.DateField(auto_now_add=True)),
                 ('updated_at', models.DateField(auto_now=True)),
                 ('materia', models.ForeignKey(to='universidad.Materia')),
             ],
-            options={
-            },
-            bases=(models.Model,),
         ),
         migrations.CreateModel(
-            name='PlanillaPorAlumno',
+            name='CursoPorAlumno',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('asistencia', models.BooleanField(default=True)),
+                ('id', models.AutoField(primary_key=True, serialize=False, verbose_name='ID', auto_created=True)),
                 ('alumno', models.ForeignKey(to='alumnos.Alumno')),
-                ('planilla', models.ForeignKey(to='Planilla.Planilla')),
+                ('curso', models.ForeignKey(to='curso.Curso')),
             ],
-            options={
-            },
-            bases=(models.Model,),
         ),
     ]

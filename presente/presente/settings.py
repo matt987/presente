@@ -40,7 +40,7 @@ INSTALLED_APPS = (
     'alumnos',
     'empleados',
     'universidad',
-    'Planilla',
+    'curso',
 )
 
 MIDDLEWARE_CLASSES = (
