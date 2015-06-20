@@ -4,11 +4,11 @@ from universidad.models import Materia
 
 class Curso(models.Model):
   materia = models.ForeignKey(Materia)
-  fecha = models.DateField()
+  descripcion = models.CharField(max_length=200,default="")
   created_at = models.DateField(auto_now_add=True)
   updated_at = models.DateField(auto_now=True)
   def __str__(self):
-    return str(self.fecha)
+    return str(self.descripcion)
 
 class CursoPorAlumno(models.Model):
   curso = models.ForeignKey(Curso)

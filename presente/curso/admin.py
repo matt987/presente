@@ -3,7 +3,7 @@ from curso.models import Curso, CursoPorAlumno
 
 class CursoPorAlumnoInLine(admin.TabularInline):
 	model = CursoPorAlumno
-	extra = 10
+	extra = 1
 
 class CursoAdmin(admin.ModelAdmin):
 	inlines=(
